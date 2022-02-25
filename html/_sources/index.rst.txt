@@ -1,0 +1,318 @@
+.. Peponi documentation master file, created by
+   sphinx-quickstart on Thu Jan 20 00:02:46 2022.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+   .. figure:: /images/image6.png
+      :align: center
+      :scale: 100%
+      :alt:
+
+Welcome to Pauli-θ's documentation page!
+
+.. contents:: Table of Contents
+
+
+
+
+Introduction
+============
+
+Welcome to the documentation page for Pauli-θ, the world's first open hardware photonic quantum computer! If you are new to this documentation, we recommend that you read the introduction page to get an overview of what this documentation has to offer. The table of contents below should let you easily access the documentation for your topic of interest.
+
+Quick-overview
+--------------
+The biggest problem with quantum computers is accessibility. Quantum hardware is by nature expensive and many research papers on such are locked behind pay walls. Our goal is to make quantum computing hardware more accessible by making it open and available publicly for free.
+Moreover by writing this documentation institutes, university teams and quantum enthusiasts have a single place to start learning and researching.
+This project started a way to make quantum hardware more reachable but unfortunately due to budget constrains we decided to publish our findings without building the gates ourselves.
+That said, information about quantum hardware is scarce, so this page should be better than researching difficult papers.
+Make no mistake, this doesn't mean that this is your average article speaking about the quantum world.
+We provide simple to understand animated examples for newcomers, some math for enthusiasts, and researching papers along with gate designs for scholars
+
+About Pauli-θ
+-------------
+
+A quantum computer is without a doubt a very complex piece of technology and it is therefore difficult to present Pauli-θ in just a few words. So we will take our time to analyze such complex topics in an easy to understand manner. But before we jump deep into the topic, let's go over a quick synopsis about Pauli-θ.
+
+Synopsis
+--------
+
+Pauli-θ is a photonic quantum computer. In other words, it is a quantum computer that uses photons as qubits. It uses said photons and their polarization to do calculations. It provides a comprehensive set of gates, so users can focus on designing their own quantum circuits without having to reinvent the wheel. We want to make this project a template for everyone to base their designs upon. In addition to that Pauli-θ is completely free and open source. No strings attached, no royalties, nothing.
+
+Organization of the documentation
+---------------------------------
+
+This documentation is organized in five sections with an impressively balanced distribution of contents – but the way it is split up should be relatively intuitive:
+
++ The *General section* contains this introduction as well as information about the computer, its history, creators, etc. It also contains the *Frequently asked questions*.
+
++ The *Working principle section* is the main attraction of this documentation, as it contains all the necessary information on how the computer works in an simplistic manner. It starts with a small introduction to polarization which should be the entry point for everyone.
+
++ The *In-depth section* can be read as needed, in any order. It contains gate-specific documentation as well as possible workarounds around some problems.
+
++ The *Maths section* is here to provide a more in depth explanation to how the quantum computer works. It is intended for people who have at least some experience in the quantum field, but we will try to keep it as simple and with as many explanations/comments as possible so that it can be understood by almost everyone. We do not guarantee you'll understand, but you should at least try.
+
++ The *Sources section* gives information related to the research that was required to make this project, in case that someone wants to study the research more upon something a single part of the documentation.
+
++ The *Closing arguments section* around special thanks to some people who helped and supported this project, as well as THE VERY IMPORTANT *bla bla bla*
+
+Have fun reading this documentation and feel free to help us improve
+
+
+A simple math tutorial
+======================
+
+This section is designed to teach you a little bit of linear algebra and probabilities because it will be used in our computer a lot.
+Linear algebra is crucial to both polarization and quantum physics so we will focus on that mainly.
+NOTE: If you taken any linear algebra class this should be completely unnecessary so feel free to skip it
+
+The mathematics section will include: 
+
++ Tiny introduction to linear algebra 
++ Complex numbers
++ Probabilities 
++ The operations used in our quantum system 
+
+Tiny introduction to linear algebra: 
+------------------------------------
+
+
+To explain everything behind quantum computing and generally anything quantum related, basic knowledge of linear algebra is absolutely req. 
+That is why in this section we’ll be briefly explaining most of the basic principles of linear algebra as a refresh.
+We suggest you learn proper linear algebra in order to contiue (`here <https://codebook.xanadu.ai/>`_ and `here <https://www.youtube.com/watch?v=kjBOesZCoqc&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B>`_) 
+That said this subsection will be composed by the following principles:
+
+1. Vectors
+2. Bloch Sphere 
+3. Operations on Vectors 
+4. Inner Product (Dot Product) 
+5. Matrices
+6. Tensor product
+
+
+Vectors
+-------
+
+
+Vectors are the heart and soul of linear algebra and the most important geometric object when trying to describe qubits. 
+To first understand vectors, we need to define and separate scalars from vectors.
+
+
+Scalar is a quantity having only magnitude and no direction. If only 
+α is a Real number
+
+Vector is a quantity with both magnitude and direction. They are symbolized with an arrow across 
+   .. math::
+      \vec{u}
+
+Where n the number of dimensions in a mathematical space.
+   .. math::
+
+      \alpha \in \mathbb{R}^n
+
+and , where  the number of dimensions in a mathematical space. Examples: 
+   .. math::
+      u \in \mathbb{R}^2 : \vec{u} = 
+       \begin{pmatrix} 
+    x \\ y
+    \end{pmatrix}
+
+   .. math::
+      U \in \mathbb{R}^3 : \vec{U} = 
+      \begin{pmatrix} 
+    x \\ y \\ z
+    \end{pmatrix}
+
+Vector magnitude describes the lenght of the vector:
+
+   .. math::
+
+      \| \vec{u} \| = \sqrt{x^2 + y^2}
+
+Vector direction shows the direction the vector is pointing:
+
+.. math::
+
+   \tan \theta = \frac{ y }{ x }, x \ne 0
+
+
+Bloch sphere
+------------
+
+The bloch sphere (named after the physicist Felix Bloch) is one of the most fundemental concepts of quantum computing.
+In essence, the Bloch sphere is a geometrical representation of the pure state space of a qubit. In the poles of the sphere we have the 2 states of our qubit and a 
+vector representing the state of the system. Basically, it is a unit sphere meaning that the radious of the sphere is exactly 1. **IMPORTANT**: 
+The bloch sphere is a 2D space and not a 3D space as the name sphere may suggest.
+
+.. figure:: /images/bloch.png
+   :align: center
+   :scale: 20%
+   :alt:
+
+   `Bloch sphere by wikipedia <https://en.wikipedia.org/wiki/Bloch_sphere>`_
+
+Vector operations
+-----------------
+
+Now we will very briefly go over a few of the vector operations which will be very useful in our computations later. If you don't feel very comfortable with these concepts
+we suggest that you practice before contiuing this is meant more as a refresh. 
+
+- Vector addition
+
+.. figure:: /images/VectorAddition.png
+   :align: center
+   :scale: 15%
+   :alt:
+   
+   `Read more here : <https://www.physicsclassroom.com/Class/vectors/U3L1b.cfm>`_
+
+.. math::
+   \vec{\alpha} + \vec{\beta} = 
+  \left[ {\begin{array}{cc}
+    x_{\alpha} + x_{\beta} \\
+    y_{\beta} + y_{\beta} \\
+  \end{array} } \right]
+\
+
+- Vector subsection
+
+.. figure:: /images/VectorSubtraction.png
+   :align: center
+   :scale: 10%
+   :alt:
+   
+   `Read more here : <https://www.onlinemathlearning.com/vector-subtraction.html>`_
+
+.. math::
+   \vec{\alpha} + (-\vec{\beta}) = 
+  \left[ {\begin{array}{cc}
+    x_{\alpha} - x_{-\beta} \\
+    y_{\beta} - y_{-\beta} \\
+  \end{array} } \right]
+\
+
+- Scalar-Vector Multiplication 
+
+.. figure:: /images/scalar-vector.png
+   :align: center
+   :scale: 40%
+   :alt:
+   
+   `Read more here : <https://physics.info/vector-multiplication/>`_
+
+.. math::
+   \phi * \vec{\alpha} =
+     \left[ {\begin{array}{cc}
+    \phi * x \\
+    \phi * y \\
+  \end{array} } \right]
+
+- Inner product 
+We define inner product is the operation between 2 non-zero vectors  and that always gives a scalar result. It can be symbolized as:
+
+.. math::
+   \vec{\alpha} \cdot \vec{\beta} = x_{\vec{\alpha}} \cdot x_{\vec{\beta}} + y_{\vec{\alpha}} \cdot y_{\vec{\beta}}
+
+Inner product can be used as a tool for vector normalization (making a vector have a lenght of 1)
+
+
+Working principle
+=================
+
+One of the most important things to understand while creating a photonic quantum computer is of course light, and more importantly photons. This section is designed to help you understand some basic characteristics of photons that are needed for our computer to work. Feel free to revisit this section at any time!
+
+Polarization:
+-------------
+In the beginning we mentioned polarization as the main physical phenomenon behind our computer but what exactly is polarization? Well in wikipedia’s words “Polarization is a property applying to transverse waves that specifies the geometrical orientation of the oscillations. In a transverse wave, the direction of the oscillation is perpendicular to the direction of motion of the wave”. But what does this mean exactly? To put it in simpler words, polarization is the θ° angle of the light’s waveform on a x’x axis.
+
+.. figure:: /images/image1.png
+   :align: center
+   :scale: 20%
+   :alt:
+
+   `48-2 Resnick, Halliday, Krane Physics, volume 2 <https://www.amazon.com/Physics-2-David-Halliday/dp/0471401943>`_
+
+(This is wrong , needs a lot of refining, it analyzes electric and magnetic vectors of light current suggestion: change the image to better reflect what we want it to say)
+
+For example, as you can see in the picture below, the blue waveform has a 0° angle while the red waveform has a 90° angle.
+So we can confidently say that one is perpendicular to the other. So that why we can say that the red waveform has vertical polarization *in relation* to the blue on.
+Please take into account that light polarization is measure in relation to something else. Another important characteristic is the wavelength of the wave. We define wavelength as the distance between two peaks in the graph.
+
+.. figure:: /images/image9.png
+   :align: center
+   :alt:
+
+   `Polarization article by wikipedia <https://en.wikipedia.org/wiki/Polarization_(waves)>`_
+
+
+
+
+Reflection:
+-----------
+Starting off with reflection, it’s a pretty well-known concept with no need for an introduction, but for the sake of completeness we will briefly explain what it is and what it does. Reflection is the change in the direction of a waveform. Reflection can be seen in light, sound and even water waves. Now, the reflection of light can be categorised as specular reflection or diffuse reflection, depending on the surface on which it is reflected from. Specular reflection is a regular reflection of a light beam from a mirror-like surface.
+
+.. figure:: /images/image3.png
+   :align: center
+   :scale: 30%
+   :alt:
+
+   `Specular reflection by wikipedia <https://en.wikipedia.org/wiki/Specular_Reflection>`_
+
+We will mainly focus on specular reflections since we are dealing with mirrors.
+There are 3 types of rays you must understand:
+
+
++---------------+----------------------------------------------------------------------+
+|Incident ray   |   The ray coming out of the surface                                  |
++---------------+----------------------------------------------------------------------+
+| Normal        |   The normal vector of the Incident ray                              |
++---------------+----------------------------------------------------------------------+
+| Reflected ray |   The ray going out of the surface after it has been reflected       |
++---------------+----------------------------------------------------------------------+
+
+
+
+Single photon generation
+------------------------
+
+Understanding single photon generation is fundemental when working with photons. Most traditonal light sources such as the light bulb are coherent light sources, meaning that they produce a stream of photons whereas SPE produce only 1 photon.
+[Insert difference between beam and single photon.gif]
+However, our computer uses only a single photon as qubit (xanadu's and other programable quantum compueters use something known as a squeezed state of light which workd fundementally diffrent from our but you check more if you are interested here:    `Squeezed states by wikipedia <https://en.wikipedia.org/wiki/Squeezed_states_of_light>`_)
+So we need to find a reliable source to generate our qubit. As of right now there is no known way to consistenly produce a single photon but rather we rely on 
+probabilistic sources to work. 
+
+
+Component explanations and designs
+==================================
+
+Single photon emitter
+---------------------
+CHEAP:
+EXPENSIVE:
+
+Let’s start with our first and most important component, a single photon emitter (SPE): The purpose of the single photon emitter is to generate a single photon 
+While at first constructing such a device from inexpensive components might seem hard the truth is far from that thanks to a phenomenon called Spontaneous Parametric
+Down Conversion. In essence, by using a special nonlinear crystal (which is relatively inexpensive) SPDC allows us to break a higher energy photon into two lower
+energy, entangled photons. Then with some cleverly placed mirrors we can direct either one or both of the photons into the circuit.
+[Insert animation with SPDC].
+While at glance one might think that we are done with our photon generation there is actually one more step to this process, breaking the entanglement. To do this we have designed something that we call  "The Monstrosity™".
+As we briefly said above SPDC creates 2 entangled photons but in order to use those photons in any circuit we need to break their entanglement and set them in the |0> state, that’s where
+The Monstrosity™ comes into play. The Monstrosity™ is nothing more than a polarised beam splitter with some mirrors in order to nondestructively collapse the 
+entanglement between the 2 photons. [Insert The Monstrosity™.jpg]. Afer that, we only utilise only 1 qubit because after The Monstrosity™ one qubit will be in the state
+|0> and the other in the
+|1> state
+
+
+
+And this is a header
+====================
+
+
+This is gonna be a SubHEADER
+----------------------------
+
+Lets make a codeblock::
+
+  Like blla bla bla quantum siuns go brrr baby
+
+::
