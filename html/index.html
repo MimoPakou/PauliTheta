@@ -43,26 +43,20 @@
 <li><a class="reference internal" href="#about-pauli">About Pauli-θ</a></li>
 <li><a class="reference internal" href="#synopsis">Synopsis</a></li>
 <li><a class="reference internal" href="#organization-of-the-documentation">Organization of the documentation</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#a-simple-math-tutorial">A simple math tutorial</a><ul>
-<li><a class="reference internal" href="#tiny-introduction-to-linear-algebra">Tiny introduction to linear algebra:</a></li>
+<li><a class="reference internal" href="#linear-algebra-basics">Linear algebra basics</a></li>
 <li><a class="reference internal" href="#vectors">Vectors</a></li>
-<li><a class="reference internal" href="#bloch-sphere">Bloch sphere</a></li>
 <li><a class="reference internal" href="#vector-operations">Vector operations</a></li>
+<li><a class="reference internal" href="#bloch-sphere">Bloch sphere</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#working-principle">Working principle</a><ul>
-<li><a class="reference internal" href="#polarization">Polarization:</a></li>
-<li><a class="reference internal" href="#reflection">Reflection:</a></li>
+<li><a class="reference internal" href="#polarization">Polarization</a></li>
+<li><a class="reference internal" href="#reflection">Reflection</a></li>
 <li><a class="reference internal" href="#single-photon-generation">Single photon generation</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#component-explanations-and-designs">Component explanations and designs</a><ul>
-<li><a class="reference internal" href="#single-photon-emitter">Single photon emitter</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#and-this-is-a-header">And this is a header</a><ul>
+<li><a class="reference internal" href="#component-explanations-and-designs">Component explanations and designs</a></li>
+<li><a class="reference internal" href="#remember-to-put-make-the-anims">Remember to put/make the anims</a><ul>
 <li><a class="reference internal" href="#this-is-gonna-be-a-subheader">This is gonna be a SubHEADER</a></li>
 </ul>
 </li>
@@ -93,69 +87,30 @@
            <div itemprop="articleBody">
              
   <p>Welcome to Pauli-θ’s documentation page!</p>
-<div class="contents topic" id="table-of-contents">
-<p class="topic-title">Table of Contents</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#introduction" id="id15">Introduction</a></p>
-<ul>
-<li><p><a class="reference internal" href="#quick-overview" id="id16">Quick-overview</a></p></li>
-<li><p><a class="reference internal" href="#about-pauli" id="id17">About Pauli-θ</a></p></li>
-<li><p><a class="reference internal" href="#synopsis" id="id18">Synopsis</a></p></li>
-<li><p><a class="reference internal" href="#organization-of-the-documentation" id="id19">Organization of the documentation</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#a-simple-math-tutorial" id="id20">A simple math tutorial</a></p>
-<ul>
-<li><p><a class="reference internal" href="#tiny-introduction-to-linear-algebra" id="id21">Tiny introduction to linear algebra:</a></p></li>
-<li><p><a class="reference internal" href="#vectors" id="id22">Vectors</a></p></li>
-<li><p><a class="reference internal" href="#bloch-sphere" id="id23">Bloch sphere</a></p></li>
-<li><p><a class="reference internal" href="#vector-operations" id="id24">Vector operations</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#working-principle" id="id25">Working principle</a></p>
-<ul>
-<li><p><a class="reference internal" href="#polarization" id="id26">Polarization:</a></p></li>
-<li><p><a class="reference internal" href="#reflection" id="id27">Reflection:</a></p></li>
-<li><p><a class="reference internal" href="#single-photon-generation" id="id28">Single photon generation</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#component-explanations-and-designs" id="id29">Component explanations and designs</a></p>
-<ul>
-<li><p><a class="reference internal" href="#single-photon-emitter" id="id30">Single photon emitter</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#and-this-is-a-header" id="id31">And this is a header</a></p>
-<ul>
-<li><p><a class="reference internal" href="#this-is-gonna-be-a-subheader" id="id32">This is gonna be a SubHEADER</a></p></li>
-</ul>
-</li>
-</ul>
-</div>
 <section id="introduction">
-<h1><a class="toc-backref" href="#id15">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h1>
-<p>Welcome to the documentation page for Pauli-θ, the world’s first open hardware photonic quantum computer! If you are new to this documentation, we recommend that you read the introduction page to get an overview of what this documentation has to offer. The table of contents below should let you easily access the documentation for your topic of interest.</p>
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h1>
+<p>Welcome to the documentation page for Pauli-θ, the world’s first open hardware photonic quantum computer! If you are new to this documentation, we recommend that you read the introduction page to get an overview of what this documentation has to offer.</p>
 <section id="quick-overview">
-<h2><a class="toc-backref" href="#id16">Quick-overview</a><a class="headerlink" href="#quick-overview" title="Permalink to this headline"></a></h2>
+<h2>Quick-overview<a class="headerlink" href="#quick-overview" title="Permalink to this headline"></a></h2>
 <p>The biggest problem with quantum computers is accessibility. Quantum hardware is by nature expensive and many research papers on such are locked behind pay walls. Our goal is to make quantum computing hardware more accessible by making it open and available publicly for free.
-Moreover by writing this documentation institutes, university teams and quantum enthusiasts have a single place to start learning and researching.
-This project started a way to make quantum hardware more reachable but unfortunately due to budget constrains we decided to publish our findings without building the gates ourselves.
-That said, information about quantum hardware is scarce, so this page should be better than researching difficult papers.
+This project is meant to make barebones quantum hardware more accessible. To acomplish that we decided to make our findings available for free under the GNU license
+This page  is meant to be more digestible than researching individualy difficult to read papers.
 Make no mistake, this doesn’t mean that this is your average article speaking about the quantum world.
-We provide simple to understand animated examples for newcomers, some math for enthusiasts, and researching papers along with gate designs for scholars</p>
+We provide simple to understand animated (Coming Soon) examples for newcomers, some math for enthusiasts, and researching papers along with gate designs for people with experience.</p>
 </section>
 <section id="about-pauli">
-<h2><a class="toc-backref" href="#id17">About Pauli-θ</a><a class="headerlink" href="#about-pauli" title="Permalink to this headline"></a></h2>
+<h2>About Pauli-θ<a class="headerlink" href="#about-pauli" title="Permalink to this headline"></a></h2>
 <p>A quantum computer is without a doubt a very complex piece of technology and it is therefore difficult to present Pauli-θ in just a few words. So we will take our time to analyze such complex topics in an easy to understand manner. But before we jump deep into the topic, let’s go over a quick synopsis about Pauli-θ.</p>
 </section>
 <section id="synopsis">
-<h2><a class="toc-backref" href="#id18">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline"></a></h2>
-<p>Pauli-θ is a photonic quantum computer. In other words, it is a quantum computer that uses photons as qubits. It uses said photons and their polarization to do calculations. It provides a comprehensive set of gates, so users can focus on designing their own quantum circuits without having to reinvent the wheel. We want to make this project a template for everyone to base their designs upon. In addition to that Pauli-θ is completely free and open source. No strings attached, no royalties, nothing.</p>
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline"></a></h2>
+<p>Pauli-θ is a model of a photonic quantum computer. In other words, it is a quantum computer that uses photons and their polarization as qubits to perform calculations. It provides a comprehensive set of gates, so users can focus on designing their own quantum circuits without having to reinvent the wheel. We want to make this project a template for everyone to base their designs upon. In addition to that Pauli-θ is completely free and open source. No strings attached, no royalties, nothing.</p>
 </section>
 <section id="organization-of-the-documentation">
-<h2><a class="toc-backref" href="#id19">Organization of the documentation</a><a class="headerlink" href="#organization-of-the-documentation" title="Permalink to this headline"></a></h2>
-<p>This documentation is organized in five sections with an impressively balanced distribution of contents – but the way it is split up should be relatively intuitive:</p>
+<h2>Organization of the documentation<a class="headerlink" href="#organization-of-the-documentation" title="Permalink to this headline"></a></h2>
+<p>This documentation is organized in five sections with an relatively balanced distribution of contents – but the way it is split up should be relatively intuitive:</p>
 <ul class="simple">
-<li><p>The <em>General section</em> contains this introduction as well as information about the computer, its history, creators, etc. It also contains the <em>Frequently asked questions</em>.</p></li>
+<li><p>The <em>Intro section</em> contains this introduction as well as a small refresh on some linear algebra that will be used later. It also contains the <em>Frequently asked questions</em>.</p></li>
 <li><p>The <em>Working principle section</em> is the main attraction of this documentation, as it contains all the necessary information on how the computer works in an simplistic manner. It starts with a small introduction to polarization which should be the entry point for everyone.</p></li>
 <li><p>The <em>In-depth section</em> can be read as needed, in any order. It contains gate-specific documentation as well as possible workarounds around some problems.</p></li>
 <li><p>The <em>Maths section</em> is here to provide a more in depth explanation to how the quantum computer works. It is intended for people who have at least some experience in the quantum field, but we will try to keep it as simple and with as many explanations/comments as possible so that it can be understood by almost everyone. We do not guarantee you’ll understand, but you should at least try.</p></li>
@@ -164,48 +119,45 @@ We provide simple to understand animated examples for newcomers, some math for e
 </ul>
 <p>Have fun reading this documentation and feel free to help us improve</p>
 </section>
-</section>
-<section id="a-simple-math-tutorial">
-<h1><a class="toc-backref" href="#id20">A simple math tutorial</a><a class="headerlink" href="#a-simple-math-tutorial" title="Permalink to this headline"></a></h1>
+<section id="linear-algebra-basics">
+<h2>Linear algebra basics<a class="headerlink" href="#linear-algebra-basics" title="Permalink to this headline"></a></h2>
 <p>This section is designed to teach you a little bit of linear algebra and probabilities because it will be used in our computer a lot.
 Linear algebra is crucial to both polarization and quantum physics so we will focus on that mainly.
 NOTE: If you taken any linear algebra class this should be completely unnecessary so feel free to skip it</p>
 <p>The mathematics section will include:</p>
 <ul class="simple">
-<li><p>Tiny introduction to linear algebra</p></li>
+<li><p>Vectors</p></li>
 <li><p>Complex numbers</p></li>
 <li><p>Probabilities</p></li>
 <li><p>The operations used in our quantum system</p></li>
 </ul>
-<section id="tiny-introduction-to-linear-algebra">
-<h2><a class="toc-backref" href="#id21">Tiny introduction to linear algebra:</a><a class="headerlink" href="#tiny-introduction-to-linear-algebra" title="Permalink to this headline"></a></h2>
+</section>
+<section id="vectors">
+<h2>Vectors<a class="headerlink" href="#vectors" title="Permalink to this headline"></a></h2>
 <p>To explain everything behind quantum computing and generally anything quantum related, basic knowledge of linear algebra is absolutely req.
 That is why in this section we’ll be briefly explaining most of the basic principles of linear algebra as a refresh.
 We suggest you learn proper linear algebra in order to contiue (<a class="reference external" href="https://codebook.xanadu.ai/">here</a> and <a class="reference external" href="https://www.youtube.com/watch?v=kjBOesZCoqc&amp;list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B">here</a>)
 That said this subsection will be composed by the following principles:</p>
 <ol class="arabic simple">
-<li><p>Vectors</p></li>
-<li><p>Bloch Sphere</p></li>
-<li><p>Operations on Vectors</p></li>
-<li><p>Inner Product (Dot Product)</p></li>
+<li><p>Vector oper</p></li>
 <li><p>Matrices</p></li>
 <li><p>Tensor product</p></li>
+<li><p>Bloch Sphere</p></li>
 </ol>
-</section>
-<section id="vectors">
-<h2><a class="toc-backref" href="#id22">Vectors</a><a class="headerlink" href="#vectors" title="Permalink to this headline"></a></h2>
 <p>Vectors are the heart and soul of linear algebra and the most important geometric object when trying to describe qubits.
 To first understand vectors, we need to define and separate scalars from vectors.</p>
 <p>Scalar is a quantity having only magnitude and no direction. If only
 α is a Real number</p>
-<dl>
-<dt>Vector is a quantity with both magnitude and direction. They are symbolized with an arrow across</dt><dd><div class="math notranslate nohighlight">
+<p>Vector is a quantity with both magnitude and direction. They are symbolized with an arrow across the top</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
 \[\vec{u}\]</div>
-</dd>
-<dt>Where n the number of dimensions in a mathematical space.</dt><dd><div class="math notranslate nohighlight">
+</div></blockquote>
+<p>Where n the number of dimensions in a mathematical space. Examples:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
 \[\alpha \in \mathbb{R}^n\]</div>
-</dd>
-<dt>and , where  the number of dimensions in a mathematical space. Examples:</dt><dd><div class="math notranslate nohighlight">
+<div class="math notranslate nohighlight">
 \[\begin{split}u \in \mathbb{R}^2 : \vec{u} =
    \begin{pmatrix}
 x \\ y
@@ -215,8 +167,7 @@ x \\ y
   \begin{pmatrix}
 x \\ y \\ z
 \end{pmatrix}\end{split}\]</div>
-</dd>
-</dl>
+</div></blockquote>
 <p>Vector magnitude describes the lenght of the vector:</p>
 <blockquote>
 <div><div class="math notranslate nohighlight">
@@ -226,30 +177,17 @@ x \\ y \\ z
 <div class="math notranslate nohighlight">
 \[\tan \theta = \frac{ y }{ x }, x \ne 0\]</div>
 </section>
-<section id="bloch-sphere">
-<h2><a class="toc-backref" href="#id23">Bloch sphere</a><a class="headerlink" href="#bloch-sphere" title="Permalink to this headline"></a></h2>
-<p>The bloch sphere (named after the physicist Felix Bloch) is one of the most fundemental concepts of quantum computing.
-In essence, the Bloch sphere is a geometrical representation of the pure state space of a qubit. In the poles of the sphere we have the 2 states of our qubit and a
-vector representing the state of the system. Basically, it is a unit sphere meaning that the radious of the sphere is exactly 1. <strong>IMPORTANT</strong>:
-The bloch sphere is a 2D space and not a 3D space as the name sphere may suggest.</p>
-<figure class="align-center" id="id10">
-<a class="reference internal image-reference" href="images/bloch.png"><img alt="" src="images/bloch.png" /></a>
-<figcaption>
-<p><span class="caption-text"><a class="reference external" href="https://en.wikipedia.org/wiki/Bloch_sphere">Bloch sphere by wikipedia</a></span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-</section>
 <section id="vector-operations">
-<h2><a class="toc-backref" href="#id24">Vector operations</a><a class="headerlink" href="#vector-operations" title="Permalink to this headline"></a></h2>
+<h2>Vector operations<a class="headerlink" href="#vector-operations" title="Permalink to this headline"></a></h2>
 <p>Now we will very briefly go over a few of the vector operations which will be very useful in our computations later. If you don’t feel very comfortable with these concepts
 we suggest that you practice before contiuing this is meant more as a refresh.</p>
 <ul class="simple">
 <li><p>Vector addition</p></li>
 </ul>
-<figure class="align-center" id="id11">
-<a class="reference internal image-reference" href="_images/VectorAddition.png"><img alt="" src="_images/VectorAddition.png" style="width: 280.2px; height: 151.04999999999998px;" /></a>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="_images/VectorAddition.png"><img alt="" src="_images/VectorAddition.png" style="width: 317.56px; height: 171.19000000000003px;" /></a>
 <figcaption>
-<p><span class="caption-text"><a class="reference external" href="https://www.physicsclassroom.com/Class/vectors/U3L1b.cfm">Read more here :</a></span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><a class="reference external" href="https://www.physicsclassroom.com/Class/vectors/U3L1b.cfm">Read more here :</a></span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <div class="math notranslate nohighlight">
@@ -262,8 +200,11 @@ we suggest that you practice before contiuing this is meant more as a refresh.</
 <ul class="simple">
 <li><p>Vector subsection</p></li>
 </ul>
-<figure class="align-center">
+<figure class="align-center" id="id8">
 <a class="reference internal image-reference" href="_images/VectorSubtraction.png"><img alt="" src="_images/VectorSubtraction.png" style="width: 128.0px; height: 92.60000000000001px;" /></a>
+<figcaption>
+<p><span class="caption-text"><a class="reference external" href="https://www.onlinemathlearning.com/vector-subtraction.html">Read more here :</a></span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
 </figure>
 <div class="math notranslate nohighlight">
 \[\begin{split}\vec{\alpha} + (-\vec{\beta}) =
@@ -275,8 +216,11 @@ we suggest that you practice before contiuing this is meant more as a refresh.</
 <ul class="simple">
 <li><p>Scalar-Vector Multiplication</p></li>
 </ul>
-<figure class="align-center">
+<figure class="align-center" id="id9">
 <a class="reference internal image-reference" href="_images/scalar-vector.png"><img alt="" src="_images/scalar-vector.png" style="width: 137.20000000000002px; height: 113.2px;" /></a>
+<figcaption>
+<p><span class="caption-text"><a class="reference external" href="https://physics.info/vector-multiplication/">Read more here :</a></span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
 </figure>
 <div class="math notranslate nohighlight">
 \[\begin{split}\phi * \vec{\alpha} =
@@ -290,39 +234,57 @@ we suggest that you practice before contiuing this is meant more as a refresh.</
 <p>We define inner product is the operation between 2 non-zero vectors  and that always gives a scalar result. It can be symbolized as:</p>
 <div class="math notranslate nohighlight">
 \[\vec{\alpha} \cdot \vec{\beta} = x_{\vec{\alpha}} \cdot x_{\vec{\beta}} + y_{\vec{\alpha}} \cdot y_{\vec{\beta}}\]</div>
-<p>Inner product can be used as a tool for vector normalization (making a vector have a lenght of 1)</p>
+<p>Inner product can be used as a tool for calcualating the magnitude:</p>
+<div class="math notranslate nohighlight">
+\[\langle\vec{u},\vec{u}\rangle = \vec{u} \cdot \vec{u}\dagger = \sum\limits_{i = 1}^n {u_1 \cdot u_1} = \sum\limits_{i = 1}^n =  {\| \vec{u} \|}^2\]</div>
+<p>Or for vector normalization:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\vec{u}}{\sqrt{\langle\vec{u} , \vec{u}\rangle}} = \frac{\vec{u}}{\|\vec{u}\|}\]</div>
+</section>
+<section id="bloch-sphere">
+<h2>Bloch sphere<a class="headerlink" href="#bloch-sphere" title="Permalink to this headline"></a></h2>
+<p>The Bloch sphere (named after Felix Bloch) is one of the most fundemental concepts of quantum computing.
+In essence, the Bloch sphere is a geometrical representation of the pure state space of a qubit. In the poles of the sphere we have the 2 states of our qubit and a
+vector representing the state of the system. Basically, it is a unit sphere used to visualize the probaility data we get from measuring our computer. <strong>IMPORTANT</strong>:
+The bloch sphere is a 2D space and not a 3D space as the name sphere may suggest.</p>
+<figure class="align-center" id="id10">
+<a class="reference internal image-reference" href="_images/Bloch.png"><img alt="" src="_images/Bloch.png" style="width: 188.0px; height: 199.9px;" /></a>
+<figcaption>
+<p><span class="caption-text"><a class="reference external" href="https://en.wikipedia.org/wiki/Bloch_sphere">Bloch sphere by wikipedia</a></span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 <section id="working-principle">
-<h1><a class="toc-backref" href="#id25">Working principle</a><a class="headerlink" href="#working-principle" title="Permalink to this headline"></a></h1>
+<h1>Working principle<a class="headerlink" href="#working-principle" title="Permalink to this headline"></a></h1>
 <p>One of the most important things to understand while creating a photonic quantum computer is of course light, and more importantly photons. This section is designed to help you understand some basic characteristics of photons that are needed for our computer to work. Feel free to revisit this section at any time!</p>
 <section id="polarization">
-<h2><a class="toc-backref" href="#id26">Polarization:</a><a class="headerlink" href="#polarization" title="Permalink to this headline"></a></h2>
+<h2>Polarization<a class="headerlink" href="#polarization" title="Permalink to this headline"></a></h2>
 <p>In the beginning we mentioned polarization as the main physical phenomenon behind our computer but what exactly is polarization? Well in wikipedia’s words “Polarization is a property applying to transverse waves that specifies the geometrical orientation of the oscillations. In a transverse wave, the direction of the oscillation is perpendicular to the direction of motion of the wave”. But what does this mean exactly? To put it in simpler words, polarization is the θ° angle of the light’s waveform on a x’x axis.</p>
-<figure class="align-center" id="id12">
+<figure class="align-center" id="id11">
 <a class="reference internal image-reference" href="_images/image1.png"><img alt="" src="_images/image1.png" style="width: 214.4px; height: 220.4px;" /></a>
 <figcaption>
-<p><span class="caption-text"><a class="reference external" href="https://www.amazon.com/Physics-2-David-Halliday/dp/0471401943">48-2 Resnick, Halliday, Krane Physics, volume 2</a></span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><a class="reference external" href="https://www.amazon.com/Physics-2-David-Halliday/dp/0471401943">48-2 Resnick, Halliday, Krane Physics, volume 2</a></span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>(This is wrong , needs a lot of refining, it analyzes electric and magnetic vectors of light current suggestion: change the image to better reflect what we want it to say)</p>
 <p>For example, as you can see in the picture below, the blue waveform has a 0° angle while the red waveform has a 90° angle.
 So we can confidently say that one is perpendicular to the other. So that why we can say that the red waveform has vertical polarization <em>in relation</em> to the blue on.
 Please take into account that light polarization is measure in relation to something else. Another important characteristic is the wavelength of the wave. We define wavelength as the distance between two peaks in the graph.</p>
-<figure class="align-center" id="id13">
+<figure class="align-center" id="id12">
 <img alt="" src="_images/image9.png" />
 <figcaption>
-<p><span class="caption-text"><a class="reference external" href="https://en.wikipedia.org/wiki/Polarization_(waves)">Polarization article by wikipedia</a></span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><a class="reference external" href="https://en.wikipedia.org/wiki/Polarization_(waves)">Polarization article by wikipedia</a></span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="reflection">
-<h2><a class="toc-backref" href="#id27">Reflection:</a><a class="headerlink" href="#reflection" title="Permalink to this headline"></a></h2>
+<h2>Reflection<a class="headerlink" href="#reflection" title="Permalink to this headline"></a></h2>
 <p>Starting off with reflection, it’s a pretty well-known concept with no need for an introduction, but for the sake of completeness we will briefly explain what it is and what it does. Reflection is the change in the direction of a waveform. Reflection can be seen in light, sound and even water waves. Now, the reflection of light can be categorised as specular reflection or diffuse reflection, depending on the surface on which it is reflected from. Specular reflection is a regular reflection of a light beam from a mirror-like surface.</p>
-<figure class="align-center" id="id14">
+<figure class="align-center" id="id13">
 <a class="reference internal image-reference" href="_images/image3.png"><img alt="" src="_images/image3.png" style="width: 394.8px; height: 249.29999999999998px;" /></a>
 <figcaption>
-<p><span class="caption-text"><a class="reference external" href="https://en.wikipedia.org/wiki/Specular_Reflection">Specular reflection by wikipedia</a></span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><a class="reference external" href="https://en.wikipedia.org/wiki/Specular_Reflection">Specular reflection by wikipedia</a></span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>We will mainly focus on specular reflections since we are dealing with mirrors.
@@ -346,7 +308,7 @@ There are 3 types of rays you must understand:</p>
 </table>
 </section>
 <section id="single-photon-generation">
-<h2><a class="toc-backref" href="#id28">Single photon generation</a><a class="headerlink" href="#single-photon-generation" title="Permalink to this headline"></a></h2>
+<h2>Single photon generation<a class="headerlink" href="#single-photon-generation" title="Permalink to this headline"></a></h2>
 <p>Understanding single photon generation is fundemental when working with photons. Most traditonal light sources such as the light bulb are coherent light sources, meaning that they produce a stream of photons whereas SPE produce only 1 photon.
 [Insert difference between beam and single photon.gif]
 However, our computer uses only a single photon as qubit (xanadu’s and other programable quantum compueters use something known as a squeezed state of light which workd fundementally diffrent from our but you check more if you are interested here:    <a class="reference external" href="https://en.wikipedia.org/wiki/Squeezed_states_of_light">Squeezed states by wikipedia</a>)
@@ -355,10 +317,10 @@ probabilistic sources to work.</p>
 </section>
 </section>
 <section id="component-explanations-and-designs">
-<h1><a class="toc-backref" href="#id29">Component explanations and designs</a><a class="headerlink" href="#component-explanations-and-designs" title="Permalink to this headline"></a></h1>
-<section id="single-photon-emitter">
-<h2><a class="toc-backref" href="#id30">Single photon emitter</a><a class="headerlink" href="#single-photon-emitter" title="Permalink to this headline"></a></h2>
-<p>CHEAP:
+<h1>Component explanations and designs<a class="headerlink" href="#component-explanations-and-designs" title="Permalink to this headline"></a></h1>
+<p>Single photon emitter
+———————https
+CHEAP:
 EXPENSIVE:</p>
 <p>Let’s start with our first and most important component, a single photon emitter (SPE): The purpose of the single photon emitter is to generate a single photon
 While at first constructing such a device from inexpensive components might seem hard the truth is far from that thanks to a phenomenon called Spontaneous Parametric
@@ -366,17 +328,16 @@ Down Conversion. In essence, by using a special nonlinear crystal (which is rela
 energy, entangled photons. Then with some cleverly placed mirrors we can direct either one or both of the photons into the circuit.
 [Insert animation with SPDC].
 While at glance one might think that we are done with our photon generation there is actually one more step to this process, breaking the entanglement. To do this we have designed something that we call  “The Monstrosity™”.
-As we briefly said above SPDC creates 2 entangled photons but in order to use those photons in any circuit we need to break their entanglement and set them in the <a href="#id4"><span class="problematic" id="id5">|</span></a>0&gt; state, that’s where
+As we briefly said above SPDC creates 2 entangled photons but in order to use those photons in any circuit we need to break their entanglement and set them in the <a href="#id1"><span class="problematic" id="id2">|</span></a>0&gt; state, that’s where
 The Monstrosity™ comes into play. The Monstrosity™ is nothing more than a polarised beam splitter with some mirrors in order to nondestructively collapse the
 entanglement between the 2 photons. [Insert The Monstrosity™.jpg]. Afer that, we only utilise only 1 qubit because after The Monstrosity™ one qubit will be in the state
-<a href="#id6"><span class="problematic" id="id7">|</span></a>0&gt; and the other in the
-<a href="#id8"><span class="problematic" id="id9">|</span></a>1&gt; state</p>
+<a href="#id3"><span class="problematic" id="id4">|</span></a>0&gt; and the other in the
+<a href="#id5"><span class="problematic" id="id6">|</span></a>1&gt; state</p>
 </section>
-</section>
-<section id="and-this-is-a-header">
-<h1><a class="toc-backref" href="#id31">And this is a header</a><a class="headerlink" href="#and-this-is-a-header" title="Permalink to this headline"></a></h1>
+<section id="remember-to-put-make-the-anims">
+<h1>Remember to put/make the anims<a class="headerlink" href="#remember-to-put-make-the-anims" title="Permalink to this headline"></a></h1>
 <section id="this-is-gonna-be-a-subheader">
-<h2><a class="toc-backref" href="#id32">This is gonna be a SubHEADER</a><a class="headerlink" href="#this-is-gonna-be-a-subheader" title="Permalink to this headline"></a></h2>
+<h2>This is gonna be a SubHEADER<a class="headerlink" href="#this-is-gonna-be-a-subheader" title="Permalink to this headline"></a></h2>
 <p>Lets make a codeblock:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Like</span> <span class="n">blla</span> <span class="n">bla</span> <span class="n">bla</span> <span class="n">quantum</span> <span class="n">siuns</span> <span class="n">go</span> <span class="n">brrr</span> <span class="n">baby</span>
 </pre></div>
