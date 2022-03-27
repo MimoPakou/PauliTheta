@@ -174,7 +174,7 @@ Bloch sphere
 The Bloch sphere (named after Felix Bloch) is one of the most fundamental concepts of quantum computing.
 In essence, the Bloch sphere is a geometrical representation of the pure state space of a qubit. In the poles of the sphere we have the 2 states of our qubit and a 
 vector representing the state of the system. Basically, it is a unit sphere used to visualize the probability data we get from measuring our computer. **IMPORTANT**: 
-The bloch sphere is a 2D `hilbert space <https://www.youtube.com/watch?v=9GV4QmQWJGU>>`__ and not a 3D space as the name sphere may suggest.
+The bloch sphere is a 2D `hilbert space <https://www.youtube.com/watch?v=9GV4QmQWJGU>`__ and not a 3D space as the name sphere may suggest.
 
 .. figure:: /images/Bloch.png
    :align: center
