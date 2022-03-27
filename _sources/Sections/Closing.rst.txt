@@ -1,0 +1,25 @@
+Closing arguments
+=================
+
+
+Resources
+---------
+A list of resources to advance your quantum journey
+
+1. https://unitary.fund/
+2. https://quantumcomputing.com/
+3. https://q4quanta.github.io/qcdocs/
+4. https://ocw.mit.edu/courses/mathematics/18-435j-quantum-computation-fall-2003/
+5. https://lab.quantumflytrap.com/lab
+6. https://github.com/xtellurian/QuantumResources
+7. https://github.com/praveenb7/Quantum-Computing-Resources
+
+Special Thanks
+--------------
+We would like to personally thank the following people:
+
+Evagelos Chatzistavrou for supporting our last two projects and helping us into making this documentation possible.
+
+Andrianos Balla for helping us solve a design problem regarding the Disentangling Device
+
+Rasťo Desák for assisting us with understanding some abstract math concepts

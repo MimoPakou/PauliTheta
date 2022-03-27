@@ -1,0 +1,184 @@
+Maths
+=====================
+
+This section is designed to teach you a little bit of linear algebra because it will be used in our computer a lot.
+Linear algebra is crucial to both polarization and quantum physics so we will focus on that mainly.
+NOTE: If you taken any linear algebra class this should be completely unnecessary so feel free to skip it
+
+This section will include: 
+
++ Vectors 
++ Vector operations
++ Matrices
++ Tensor product
++ Bloch sphere
+
+Vectors
+-------
+
+To explain everything behind quantum computing and generally anything quantum related, basic knowledge of linear algebra is absolutely req. 
+That is why in this section we’ll be briefly explaining most of the basic principles of linear algebra as a refresh.
+We suggest you learn proper linear algebra in order to continue (`here <https://codebook.xanadu.ai/>`__ and `here <https://www.youtube.com/watch?v=kjBOesZCoqc&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B>`__) 
+
+Vectors are the heart and soul of linear algebra and the most important geometric object when trying to describe qubits. 
+To first understand vectors, we need to define and separate scalars from vectors.
+
+
+Scalar is a quantity having only magnitude and no direction. If only 
+α is a Real number
+
+Vector is a quantity with both magnitude and direction. They are symbolized with an arrow across the top
+
+   .. math::
+      \vec{u}
+
+Where n the number of dimensions in a mathematical space. Examples: 
+   
+   .. math::
+
+      \alpha \in \mathbb{R}^n
+   
+   .. math::
+      u \in \mathbb{R}^2 : \vec{u} = 
+       \begin{pmatrix} 
+    x \\ y
+    \end{pmatrix}
+
+   .. math::
+      U \in \mathbb{R}^3 : \vec{U} = 
+      \begin{pmatrix} 
+    x \\ y \\ z
+    \end{pmatrix}
+
+Vector magnitude describes the length of the vector:
+
+   .. math::
+
+      \| \vec{u} \| = \sqrt{x^2 + y^2}
+
+Vector direction shows the direction the vector is pointing:
+
+.. math::
+
+   \tan \theta = \frac{ y }{ x }, x \ne 0
+
+Vector operations
+-----------------
+
+Now we will very briefly go over a few of the vector operations which will be very useful in our computations later. If you don't feel very comfortable with these concepts
+we suggest that you practice before continuing this is meant more as a refresh. 
+
+- Vector addition
+
+.. figure:: /images/Addition.gif
+   :align: center
+   :alt:
+   
+   `Read more here : <https://www.physicsclassroom.com/Class/vectors/U3L1b.cfm>`__
+
+.. math::
+   \vec{\alpha} + \vec{\beta} = 
+  \left[ {\begin{array}{cc}
+    x_{\alpha} + x_{\beta} \\
+    y_{\beta} + y_{\beta} \\
+  \end{array} } \right]
+\
+
+- Vector subsection
+
+.. figure:: /images/Subsection.gif
+   :align: center
+   :alt:
+   
+   `Read more here : <https://www.onlinemathlearning.com/vector-subtraction.html>`__
+
+.. math::
+   \vec{\alpha} + (-\vec{\beta}) = 
+  \left[ {\begin{array}{cc}
+    x_{\alpha} - x_{-\beta} \\
+    y_{\beta} - y_{-\beta} \\
+  \end{array} } \right]
+\
+
+- Scalar-Vector Multiplication 
+
+.. figure:: /images/VectorScalar.gif
+   :align: center
+   :alt:
+   
+   `Read more here : <https://physics.info/vector-multiplication/>`__
+
+.. math::
+   \phi * \vec{\alpha} =
+     \left[ {\begin{array}{cc}
+    \phi * x \\
+    \phi * y \\
+  \end{array} } \right]
+
+- Inner product 
+We define inner product is the operation between 2 non-zero vectors  and that always gives a scalar result. It can be symbolized as:
+
+.. math::
+   \vec{\alpha} \cdot \vec{\beta} = x_{\vec{\alpha}} \cdot x_{\vec{\beta}} + y_{\vec{\alpha}} \cdot y_{\vec{\beta}}
+
+Inner product can be used as a tool for calculating the magnitude:
+
+.. math::
+   \langle\vec{u},\vec{u}\rangle = \vec{u} \cdot \vec{u}\dagger = \sum\limits_{i = 1}^n {u_1 \cdot u_1} = \sum\limits_{i = 1}^n =  {\| \vec{u} \|}^2
+
+Or for vector normalization:
+
+.. math::
+   \frac{\vec{u}}{\sqrt{\langle\vec{u} , \vec{u}\rangle}} = \frac{\vec{u}}{\|\vec{u}\|}
+
+Matrices
+--------
+
+Matrices are rectangular arrays of numbers, symbols and expressions arranged in columns and rows, used to to mathematically describe objects such as quantum gates. 
+For example:
+
+.. math::
+   \begin{pmatrix} 
+   1 & 2 & 3 \\
+   4 & 5 & 6
+   \end{pmatrix}
+
+That is a matrix called “2x3 matrix” because it consists of 2 rows and 3 columns.  
+A matrix is called unitary when its conjugate transpose is also its inverse.  
+
+Tensor product
+--------------
+Tensor product the only matrix operation we really recommend that you get very familiar with it since it's used a lot in quantum computing. We will simply offer a refresh here but you can read more `here <https://en.wikipedia.org/wiki/Tensor_product>`__
+
+.. math::
+   \begin{pmatrix}
+   \alpha \\
+   \beta
+   \end{pmatrix} 
+   \otimes 
+   \begin{pmatrix}
+   \gamma \\
+   \delta
+   \end{pmatrix}
+   =
+   \begin{pmatrix}
+   \alpha * \begin{pmatrix} \gamma \\ \delta \end{pmatrix}
+   \beta * \begin{pmatrix} \gamma \\ \delta \end{pmatrix}
+   \end{pmatrix}
+
+
+
+Bloch sphere
+------------
+
+The Bloch sphere (named after Felix Bloch) is one of the most fundamental concepts of quantum computing.
+In essence, the Bloch sphere is a geometrical representation of the pure state space of a qubit. In the poles of the sphere we have the 2 states of our qubit and a 
+vector representing the state of the system. Basically, it is a unit sphere used to visualize the probability data we get from measuring our computer. **IMPORTANT**: 
+The bloch sphere is a 2D `hilbert space <https://www.youtube.com/watch?v=9GV4QmQWJGU>>`__ and not a 3D space as the name sphere may suggest.
+
+.. figure:: /images/Bloch.png
+   :align: center
+   :scale: 10%
+   :alt:
+
+   `Bloch sphere by wikipedia <https://en.wikipedia.org/wiki/Bloch_sphere>`__

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maths &mdash; Pauli-θ Beta documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Fundamental concepts" href="FundementalConcepts.html" />
+    <link rel="prev" title="Introduction" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Pauli-θ
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Maths</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vectors">Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vector-operations">Vector operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#matrices">Matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tensor-product">Tensor product</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bloch-sphere">Bloch sphere</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FundementalConcepts.html">Fundamental concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Components.html">Component explanations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Design.html">Computer design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Closing.html">Closing arguments</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Pauli-θ</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Maths</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Sections/Maths.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="maths">
+<h1>Maths<a class="headerlink" href="#maths" title="Permalink to this headline"></a></h1>
+<p>This section is designed to teach you a little bit of linear algebra because it will be used in our computer a lot.
+Linear algebra is crucial to both polarization and quantum physics so we will focus on that mainly.
+NOTE: If you taken any linear algebra class this should be completely unnecessary so feel free to skip it</p>
+<p>This section will include:</p>
+<ul class="simple">
+<li><p>Vectors</p></li>
+<li><p>Vector operations</p></li>
+<li><p>Matrices</p></li>
+<li><p>Tensor product</p></li>
+<li><p>Bloch sphere</p></li>
+</ul>
+<section id="vectors">
+<h2>Vectors<a class="headerlink" href="#vectors" title="Permalink to this headline"></a></h2>
+<p>To explain everything behind quantum computing and generally anything quantum related, basic knowledge of linear algebra is absolutely req.
+That is why in this section we’ll be briefly explaining most of the basic principles of linear algebra as a refresh.
+We suggest you learn proper linear algebra in order to continue (<a class="reference external" href="https://codebook.xanadu.ai/">here</a> and <a class="reference external" href="https://www.youtube.com/watch?v=kjBOesZCoqc&amp;list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B">here</a>)</p>
+<p>Vectors are the heart and soul of linear algebra and the most important geometric object when trying to describe qubits.
+To first understand vectors, we need to define and separate scalars from vectors.</p>
+<p>Scalar is a quantity having only magnitude and no direction. If only
+α is a Real number</p>
+<p>Vector is a quantity with both magnitude and direction. They are symbolized with an arrow across the top</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\vec{u}\]</div>
+</div></blockquote>
+<p>Where n the number of dimensions in a mathematical space. Examples:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\alpha \in \mathbb{R}^n\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}u \in \mathbb{R}^2 : \vec{u} =
+   \begin{pmatrix}
+x \\ y
+\end{pmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}U \in \mathbb{R}^3 : \vec{U} =
+  \begin{pmatrix}
+x \\ y \\ z
+\end{pmatrix}\end{split}\]</div>
+</div></blockquote>
+<p>Vector magnitude describes the length of the vector:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\| \vec{u} \| = \sqrt{x^2 + y^2}\]</div>
+</div></blockquote>
+<p>Vector direction shows the direction the vector is pointing:</p>
+<div class="math notranslate nohighlight">
+\[\tan \theta = \frac{ y }{ x }, x \ne 0\]</div>
+</section>
+<section id="vector-operations">
+<h2>Vector operations<a class="headerlink" href="#vector-operations" title="Permalink to this headline"></a></h2>
+<p>Now we will very briefly go over a few of the vector operations which will be very useful in our computations later. If you don’t feel very comfortable with these concepts
+we suggest that you practice before continuing this is meant more as a refresh.</p>
+<ul class="simple">
+<li><p>Vector addition</p></li>
+</ul>
+<figure class="align-center" id="id1">
+<img alt="" src="../_images/Addition.gif" />
+<figcaption>
+<p><span class="caption-text"><a class="reference external" href="https://www.physicsclassroom.com/Class/vectors/U3L1b.cfm">Read more here :</a></span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{\alpha} + \vec{\beta} =
+\left[ {\begin{array}{cc}
+  x_{\alpha} + x_{\beta} \\
+  y_{\beta} + y_{\beta} \\
+\end{array} } \right]\end{split}\]</div>
+<p></p>
+<ul class="simple">
+<li><p>Vector subsection</p></li>
+</ul>
+<figure class="align-center" id="id2">
+<img alt="" src="../_images/Subsection.gif" />
+<figcaption>
+<p><span class="caption-text"><a class="reference external" href="https://www.onlinemathlearning.com/vector-subtraction.html">Read more here :</a></span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[\begin{split}\vec{\alpha} + (-\vec{\beta}) =
+\left[ {\begin{array}{cc}
+  x_{\alpha} - x_{-\beta} \\
+  y_{\beta} - y_{-\beta} \\
+\end{array} } \right]\end{split}\]</div>
+<p></p>
+<ul class="simple">
+<li><p>Scalar-Vector Multiplication</p></li>
+</ul>
+<figure class="align-center" id="id3">
+<img alt="" src="../_images/VectorScalar.gif" />
+<figcaption>
+<p><span class="caption-text"><a class="reference external" href="https://physics.info/vector-multiplication/">Read more here :</a></span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi * \vec{\alpha} =
+   \left[ {\begin{array}{cc}
+  \phi * x \\
+  \phi * y \\
+\end{array} } \right]\end{split}\]</div>
+<ul class="simple">
+<li><p>Inner product</p></li>
+</ul>
+<p>We define inner product is the operation between 2 non-zero vectors  and that always gives a scalar result. It can be symbolized as:</p>
+<div class="math notranslate nohighlight">
+\[\vec{\alpha} \cdot \vec{\beta} = x_{\vec{\alpha}} \cdot x_{\vec{\beta}} + y_{\vec{\alpha}} \cdot y_{\vec{\beta}}\]</div>
+<p>Inner product can be used as a tool for calculating the magnitude:</p>
+<div class="math notranslate nohighlight">
+\[\langle\vec{u},\vec{u}\rangle = \vec{u} \cdot \vec{u}\dagger = \sum\limits_{i = 1}^n {u_1 \cdot u_1} = \sum\limits_{i = 1}^n =  {\| \vec{u} \|}^2\]</div>
+<p>Or for vector normalization:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\vec{u}}{\sqrt{\langle\vec{u} , \vec{u}\rangle}} = \frac{\vec{u}}{\|\vec{u}\|}\]</div>
+</section>
+<section id="matrices">
+<h2>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline"></a></h2>
+<p>Matrices are rectangular arrays of numbers, symbols and expressions arranged in columns and rows, used to to mathematically describe objects such as quantum gates.
+For example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6
+\end{pmatrix}\end{split}\]</div>
+<p>That is a matrix called “2x3 matrix” because it consists of 2 rows and 3 columns.
+A matrix is called unitary when its conjugate transpose is also its inverse.</p>
+</section>
+<section id="tensor-product">
+<h2>Tensor product<a class="headerlink" href="#tensor-product" title="Permalink to this headline"></a></h2>
+<p>Tensor product the only matrix operation we really recommend that you get very familiar with it since it’s used a lot in quantum computing. We will simply offer a refresh here but you can read more <a class="reference external" href="https://en.wikipedia.org/wiki/Tensor_product">here</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+\alpha \\
+\beta
+\end{pmatrix}
+\otimes
+\begin{pmatrix}
+\gamma \\
+\delta
+\end{pmatrix}
+=
+\begin{pmatrix}
+\alpha * \begin{pmatrix} \gamma \\ \delta \end{pmatrix}
+\beta * \begin{pmatrix} \gamma \\ \delta \end{pmatrix}
+\end{pmatrix}\end{split}\]</div>
+</section>
+<section id="bloch-sphere">
+<h2>Bloch sphere<a class="headerlink" href="#bloch-sphere" title="Permalink to this headline"></a></h2>
+<p>The Bloch sphere (named after Felix Bloch) is one of the most fundamental concepts of quantum computing.
+In essence, the Bloch sphere is a geometrical representation of the pure state space of a qubit. In the poles of the sphere we have the 2 states of our qubit and a
+vector representing the state of the system. Basically, it is a unit sphere used to visualize the probability data we get from measuring our computer. <strong>IMPORTANT</strong>:
+The bloch sphere is a 2D <a href="#id5"><span class="problematic" id="id6">`hilbert space &lt;https://www.youtube.com/watch?v=9GV4QmQWJGU&gt;&gt;`__</span></a> and not a 3D space as the name sphere may suggest.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/Bloch.png"><img alt="" src="../_images/Bloch.png" style="width: 188.0px; height: 199.9px;" /></a>
+<figcaption>
+<p><span class="caption-text"><a class="reference external" href="https://en.wikipedia.org/wiki/Bloch_sphere">Bloch sphere by wikipedia</a></span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="FundementalConcepts.html" class="btn btn-neutral float-right" title="Fundamental concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Konstantinos Pavlakis and Dimitris Tzounakis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

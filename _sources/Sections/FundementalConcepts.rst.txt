@@ -1,0 +1,69 @@
+Fundamental concepts
+====================
+
+One of the most important things to understand while creating a photonic quantum computer is of course light, and more importantly photons. This section is designed to help you understand some basic characteristics of photons that are needed for our computer to work. Feel free to revisit this section at any time!
+
+Polarization
+------------
+In the beginning we mentioned polarization as the main physical phenomenon behind our computer but what exactly is polarization? Well in wikipedia’s words “Polarization is a property applying to transverse waves that specifies the geometrical orientation of the oscillations. In a transverse wave, the direction of the oscillation is perpendicular to the direction of motion of the wave”. But what does this mean exactly? To put it in simpler words, polarization is the θ° angle of the light’s waveform on a x’x axis.
+
+.. figure:: /images/image1.png
+   :align: center
+   :scale: 20%
+   :alt:
+
+   `48-2 Resnick, Halliday, Krane Physics, volume 2 <https://www.amazon.com/Physics-2-David-Halliday/dp/0471401943>`__
+
+
+
+For example, as you can see in the picture below, the blue waveform has a 0° angle while the red waveform has a 90° angle.
+So we can confidently say that one is perpendicular to the other. So that why we can say that the red waveform has vertical polarization *in relation* to the blue on.
+Please take into account that light polarization is measure in relation to something else. Another important characteristic is the wavelength of the wave. We define wavelength as the distance between two peaks in the graph.
+
+.. figure:: /images/2States.gif
+   :align: center
+   :alt:
+
+   `Polarization article by wikipedia <https://en.wikipedia.org/wiki/Polarization_(waves)>`__
+
+
+
+
+Reflection
+----------
+Reflection is a pretty well-known concept with no need for an introduction, but for the sake of completeness we will briefly explain what it is and what it does. Reflection is the change in the direction of a waveform. Reflection can be seen in light, sound and even water waves. Now, the reflection of light can be categorized as specular reflection or diffuse reflection, depending on the surface on which it is reflected from. Specular reflection is a regular reflection of a light beam from a mirror-like surface.
+
+.. figure:: /images/Reflection.gif
+   :align: center
+   :alt:
+
+   `Specular reflection by wikipedia <https://en.wikipedia.org/wiki/Specular_Reflection>`__
+
+We will mainly focus on specular reflections since we will be using mirrors to redirect the photons.
+There are 3 types of rays in specular reflection you must understand:
+
+
++---------------+----------------------------------------------------------------------+
+|Incident ray   |   The ray coming into the surface                                    |
++---------------+----------------------------------------------------------------------+
+| Normal        |   The normal vector of the Incident ray                              |
++---------------+----------------------------------------------------------------------+
+| Reflected ray |   The ray going out of the surface after it has been reflected       |
++---------------+----------------------------------------------------------------------+
+
+
+
+Single photon generation
+------------------------
+
+Understanding single photon generation is fundamental when working with photons. Most traditional light sources such as the light bulb are coherent light sources, meaning that they produce a stream of photons whereas SPE produce only 1 photon.
+However, our computer uses only a single photon as qubit (xanadu's and other programable quantum computers use something known as a squeezed state of light which works fundamentally different from our design but you check more if you are interested here:    `Squeezed states by wikipedia <https://en.wikipedia.org/wiki/Squeezed_states_of_light>`__)
+So we need to find a reliable source to generate our qubit. As of right now there is no known way to consistently produce a single photon but rather we rely on 
+probabilistic sources to work. 
+
+.. figure:: /images/SPE.gif
+   :align: center
+   :alt:
+
+   `Single photon generation by wikipedia <https://en.wikipedia.org/wiki/Single-photon_source>`__
+
