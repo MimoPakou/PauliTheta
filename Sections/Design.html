@@ -134,9 +134,10 @@ it lowers the computer’s accuracy by a substantial amount.</p>
 <p>The CNOT is a two qubit gate and it allows qubits to interact with each other.
 This gate involves 2 qubits, a control qubit and a target one. If the control is in |1⟩ state
 Then the target qubit gets flipped, but if the control is in |0⟩ then nothing happens and both qubits continue.
-To implement such a gate in our system we use 2 PBS one <a class="reference external" href="https://www.rp-photonics.com/q_switches.html">Electro-optic Q Switch</a> and one Controlled wave plate. All you need to know about the controlled wave plate is that it works exactly as an X gate (bit flip) but only when current is passing though it.
-The control qubit goes through a PBS where it splits down 2 different paths, if its in |0⟩ state, then it just continues to be measured. However if it’s in the |1⟩ state then it gets reflected by the first PBS gets nondestructively measured
-and goes back in its original path. When it is measured current is passes through the controlled wave plate activating it.</p>
+To implement such a gate in our system we need to use a nondestructive photonic qubit detector <a class="reference external" href="https://www.nature.com/articles/s41586-021-03290-z">(NPQD)</a> and a Controlled Waveplate.
+Unfortunately as far as we know NPQD’s do not exist yet so we cannot yet design a nondestructive CNOT gate. That said we can make a destructive CNOT using photon detectors like PMTs.
+All you need to know about the controlled wave plate is that it works exactly as an X gate (bit flip) but only when current is passing though it.
+Now, let’s revise how this gate works exactly. The control qubit goes through a PBS where it splits down 2 different paths, if its in |0⟩ state, then it just continues to be measured. However if it’s in the |1⟩ state then it gets reflected by the first PBS it gets measured. When the control qubit is measured in the |1⟩ state, current is passes through the controlled wave plate activating it and flipping the the target qubit in the process.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/CNOT.png"><img alt="" src="../_images/CNOT.png" style="width: 177.0px; height: 477.0px;" /></a>
 </figure>
