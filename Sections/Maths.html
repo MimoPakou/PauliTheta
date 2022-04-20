@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maths &mdash; Pauli-θ Beta documentation</title>
+  <title>Mathematics &mdash; Pauli-θ Beta documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -39,7 +39,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Maths</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mathematics</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#vectors">Vectors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vector-operations">Vector operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#matrices">Matrices</a></li>
@@ -67,7 +67,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Maths</li>
+      <li>Mathematics</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/Sections/Maths.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -77,11 +77,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="maths">
-<h1>Maths<a class="headerlink" href="#maths" title="Permalink to this headline"></a></h1>
+  <section id="mathematics">
+<h1>Mathematics<a class="headerlink" href="#mathematics" title="Permalink to this headline"></a></h1>
 <p>This section is designed to teach you a little bit of linear algebra because it will be used in our computer a lot.
 Linear algebra is crucial to both polarization and quantum physics so we will focus on that mainly.
-NOTE: If you taken any linear algebra class this should be completely unnecessary so feel free to skip it</p>
+NOTE: If you have taken any linear algebra class this should be completely unnecessary so feel free to skip it</p>
 <p>This section will include:</p>
 <ul class="simple">
 <li><p>Vectors</p></li>
@@ -174,10 +174,10 @@ we suggest that you practice before continuing this is meant more as a refresh.<
 </figcaption>
 </figure>
 <div class="math notranslate nohighlight">
-\[\begin{split}\phi * \vec{\alpha} =
+\[\begin{split}\phi \cdot \vec{\alpha} =
    \left[ {\begin{array}{cc}
-  \phi * x \\
-  \phi * y \\
+  \phi \cdot x \\
+  \phi \cdot y \\
 \end{array} } \right]\end{split}\]</div>
 <ul class="simple">
 <li><p>Inner product</p></li>
@@ -219,8 +219,24 @@ A matrix is called unitary when its conjugate transpose is also its inverse.</p>
 \end{pmatrix}
 =
 \begin{pmatrix}
-\alpha * \begin{pmatrix} \gamma \\ \delta \end{pmatrix}
-\beta * \begin{pmatrix} \gamma \\ \delta \end{pmatrix}
+\alpha \cdot
+\begin{pmatrix}
+\gamma \\
+\delta
+\end{pmatrix}
+\\
+\beta \cdot
+\begin{pmatrix}
+\gamma \\
+\delta
+\end{pmatrix}
+\end{pmatrix}
+=
+\begin{pmatrix}
+\alpha \cdot \gamma \\
+\alpha \cdot \delta \\
+\beta \cdot \gamma \\
+\beta \cdot \delta
 \end{pmatrix}\end{split}\]</div>
 </section>
 <section id="bloch-sphere">

@@ -3,7 +3,7 @@ Component explanations
 
 Polarized Beam Splitter (PBS)
 --------------------------
-Let’s start with our first and most used component, the polarized beam splitter. A PBS is an optical component meant to differentiate between the horizontal and vertical
+Let’s start with our first and most used component, the polarized beam splitter. A PBS is an optical component meant to separate between the horizontal and vertical
 polarization. This simply means that if a photon is vertically polarized (in relation to the component's orientation) it will pass through it normally but,
 if it's horizontally polarized, it will get reflected 90° as shown by the graphic below.
 

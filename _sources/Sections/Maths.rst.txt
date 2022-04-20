@@ -1,9 +1,9 @@
-Maths
-=====================
+Mathematics
+===========
 
 This section is designed to teach you a little bit of linear algebra because it will be used in our computer a lot.
 Linear algebra is crucial to both polarization and quantum physics so we will focus on that mainly.
-NOTE: If you taken any linear algebra class this should be completely unnecessary so feel free to skip it
+NOTE: If you have taken any linear algebra class this should be completely unnecessary so feel free to skip it
 
 This section will include: 
 
@@ -109,10 +109,10 @@ we suggest that you practice before continuing this is meant more as a refresh.
    `Read more here : <https://physics.info/vector-multiplication/>`__
 
 .. math::
-   \phi * \vec{\alpha} =
+   \phi \cdot \vec{\alpha} =
      \left[ {\begin{array}{cc}
-    \phi * x \\
-    \phi * y \\
+    \phi \cdot x \\
+    \phi \cdot y \\
   \end{array} } \right]
 
 - Inner product 
@@ -152,18 +152,34 @@ Tensor product the only matrix operation we really recommend that you get very f
 
 .. math::
    \begin{pmatrix}
-   \alpha \\
+   \alpha \\ 
    \beta
-   \end{pmatrix} 
-   \otimes 
+   \end{pmatrix}
+   \otimes
    \begin{pmatrix}
    \gamma \\
    \delta
    \end{pmatrix}
    =
    \begin{pmatrix}
-   \alpha * \begin{pmatrix} \gamma \\ \delta \end{pmatrix}
-   \beta * \begin{pmatrix} \gamma \\ \delta \end{pmatrix}
+   \alpha \cdot 
+   \begin{pmatrix}
+   \gamma \\
+   \delta
+   \end{pmatrix}
+   \\
+   \beta \cdot
+   \begin{pmatrix}
+   \gamma \\
+   \delta
+   \end{pmatrix}
+   \end{pmatrix}
+   =
+   \begin{pmatrix}
+   \alpha \cdot \gamma \\
+   \alpha \cdot \delta \\
+   \beta \cdot \gamma \\
+   \beta \cdot \delta
    \end{pmatrix}
 
 

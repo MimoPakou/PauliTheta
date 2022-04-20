@@ -43,7 +43,6 @@ entanglement between the 2 photons.
 
 .. figure:: /images/DisentanglingDevice.png
    :align: center
-   :scale: 200%
    :alt:
 
 Then with some cleverly placed mirrors we can direct the photons into any circuit.

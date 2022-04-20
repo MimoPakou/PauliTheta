@@ -22,4 +22,6 @@ Evagelos Chatzistavrou for supporting our last two projects and helping us into 
 
 Andrianos Balla for helping us solve a design problem regarding the Disentangling Device
 
+Panagiotis Tzounakis for helping us find the resources necessary for this research
+
 Rasťo Desák for assisting us with understanding some abstract math concepts

@@ -49,7 +49,7 @@ This documentation is organized in five sections with an relatively balanced dis
 
 + The *Introduction* contains this introduction as well as this project's goals which were mentioned above. 
 
-+ The *Maths section* is here to provide a refresh on linear algebra. It is not required to preview this documentation but for anyone who wants to take a closer look, they should familiarize themselves with those concepts.
++ The *Mathematics section* is here to provide a refresh on linear algebra. It is not required to preview this documentation but for anyone who wants to take a closer look, they should familiarize themselves with those concepts.
 
 + The *Component explanation section* can be read as needed, in any order. It contains simple information about photonic hardware components used in the design.
 
