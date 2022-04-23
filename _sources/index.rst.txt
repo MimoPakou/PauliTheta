@@ -55,7 +55,7 @@ This documentation is organized in five sections with an relatively balanced dis
 
 + The *Computer design section* is the main attraction of this documentation, as it contains all the necessary information on how the computer works in an simplistic manner.
 
-+ The *Closing arguments section* has some resources for those who want to advance their knowledge
++ The *Closing arguments section* has some resources for those who want to advance their knowledge.
 
 Have fun reading this documentation and feel free to help us improve by submitting this form : `https://forms.gle/e1YmHRE1tUnfT6zY6 <https://forms.gle/e1YmHRE1tUnfT6zY6>`__
 

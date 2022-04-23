@@ -14,14 +14,3 @@ A list of resources to advance your quantum journey
 6. https://github.com/xtellurian/QuantumResources
 7. https://github.com/praveenb7/Quantum-Computing-Resources
 
-Special Thanks
---------------
-We would like to personally thank the following people:
-
-Evagelos Chatzistavrou for supporting our last two projects and helping us into making this documentation possible.
-
-Andrianos Balla for helping us solve a design problem regarding the Disentangling Device
-
-Panagiotis Tzounakis for helping us find the resources necessary for this research
-
-Rasťo Desák for assisting us with understanding some abstract math concepts
