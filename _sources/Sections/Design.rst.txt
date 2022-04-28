@@ -37,14 +37,18 @@ energy, entangled photons. Unfortunately this effect takes place in only 1 in ab
 
 
 While at glance one might think that we are done with our photon generation there is actually one more step to this process, breaking the entanglement. To do this we have designed a module we call the Disentangling Device.
-As we briefly said above SPDC creates 2 entangled photons but in order to use those photons in any circuit we need to break their entanglement and set them in the |0⟩ state, that’s where
-Disentangling Device comes into play. Disentangling Device. is nothing more than two polarized beam splitters with some mirrors in order to nondestructively collapse the 
-entanglement between the 2 photons.
+As we briefly said above SPDC creates 2 entangled photons but in order to use those photons in any circuit we need to break their entanglement and set them in the \|0⟩ state, that’s where
+Disentangling Device comes into play. The Disentangling Device is nothing more than two polarized beam splitters, a polarized rotator and some mirrors in order to nondestructively collapse the 
+entanglement between the 2 photons.  
 
 .. figure:: /images/DisentanglingDevice.png
    :align: center
+   :scale: 30%
    :alt:
 
+When the photon is entangled and it passes through the PBS, the superposition collapses. If the photon is at the horizontal state \|0⟩ it passes through but if it is in the
+\|1⟩ state then it gets reflected, passes through the polarization rotator which changes the polarization into the state 
+\|0⟩. After that using a mirror that is placed after the polarization rotator the photon is reflected back into the stream.
 Then with some cleverly placed mirrors we can direct the photons into any circuit.
 
 Hadamard Gate/Rx(θ)

@@ -97,20 +97,23 @@ While at first constructing such a device from inexpensive components might seem
 Down Conversion (SPDC). In essence, by using a special nonlinear crystal called KDP (which is relatively inexpensive)
 SPDC allows us to break a higher energy photon into two lower
 energy, entangled photons. Unfortunately this effect takes place in only 1 in about a billion photons, so to ensure we have at least one photon in our circuits we need a high powered laser.</p>
-<figure class="align-center" id="id3">
+<figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../_images/SPDC.png"><img alt="" src="../_images/SPDC.png" style="width: 383.09999999999997px; height: 225.6px;" /></a>
 <figcaption>
-<p><span class="caption-text"><a class="reference external" href="https://en.wikipedia.org/wiki/Spontaneous_parametric_down-conversion">Spontaneous parametric down-conversion by wikipedia</a></span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><a class="reference external" href="https://en.wikipedia.org/wiki/Spontaneous_parametric_down-conversion">Spontaneous parametric down-conversion by wikipedia</a></span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>While at glance one might think that we are done with our photon generation there is actually one more step to this process, breaking the entanglement. To do this we have designed a module we call the Disentangling Device.
-As we briefly said above SPDC creates 2 entangled photons but in order to use those photons in any circuit we need to break their entanglement and set them in the <a href="#id1"><span class="problematic" id="id2">|</span></a>0⟩ state, that’s where
-Disentangling Device comes into play. Disentangling Device. is nothing more than two polarized beam splitters with some mirrors in order to nondestructively collapse the
+As we briefly said above SPDC creates 2 entangled photons but in order to use those photons in any circuit we need to break their entanglement and set them in the |0⟩ state, that’s where
+Disentangling Device comes into play. The Disentangling Device is nothing more than two polarized beam splitters, a polarized rotator and some mirrors in order to nondestructively collapse the
 entanglement between the 2 photons.</p>
 <figure class="align-center">
-<img alt="" src="../_images/DisentanglingDevice.png" />
+<a class="reference internal image-reference" href="../_images/DisentanglingDevice.png"><img alt="" src="../_images/DisentanglingDevice.png" style="width: 338.09999999999997px; height: 198.29999999999998px;" /></a>
 </figure>
-<p>Then with some cleverly placed mirrors we can direct the photons into any circuit.</p>
+<p>When the photon is entangled and it passes through the PBS, the superposition collapses. If the photon is at the horizontal state |0⟩ it passes through but if it is in the
+|1⟩ state then it gets reflected, passes through the polarization rotator which changes the polarization into the state
+|0⟩. After that using a mirror that is placed after the polarization rotator the photon is reflected back into the stream.
+Then with some cleverly placed mirrors we can direct the photons into any circuit.</p>
 </section>
 <section id="hadamard-gate-rx">
 <h2>Hadamard Gate/Rx(θ)<a class="headerlink" href="#hadamard-gate-rx" title="Permalink to this headline"></a></h2>
